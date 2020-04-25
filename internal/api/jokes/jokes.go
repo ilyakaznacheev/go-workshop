@@ -5,6 +5,8 @@ import (
 	"net/http"
 
 	"gopkg.in/square/go-jose.v2/json"
+
+	"workshop/internal/api"
 )
 
 const getJokePath = "/api?format=json"
@@ -31,5 +33,5 @@ func (jc *JokeClient) GetJoke() (*api.JokeResponse, error) {
 		return nil, err
 	}
 
-	return *data, nil
+	return &data, nil
 }
