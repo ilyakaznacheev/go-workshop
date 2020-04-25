@@ -23,6 +23,16 @@ jobs:
       with:
         go-version: 1.13
 
+    - name: Run test with coverage
+      run: go mod tidy && go test ./...
+
+    - name: Run test with coverage
+      run: go mod tidy && go test -race -coverprofile=coverage.txt -covermode=atomic ./...
+
+    - name: Upload Coverage report to CodeCov
+      uses: codecov/codecov-action@v1.0.0
+      with:
+        file: ./coverage.txt
 
   deploy:
     name: Deploy on Heroku
