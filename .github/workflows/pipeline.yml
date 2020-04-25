@@ -23,7 +23,7 @@ jobs:
       with:
         go-version: 1.13
 
-    - name: Run test with coverage
+    - name: Run test
       run: go mod tidy && go test ./...
 
     - name: Run test with coverage
@@ -33,7 +33,8 @@ jobs:
       uses: codecov/codecov-action@v1.0.0
       with:
         file: ./coverage.txt
-        fail_ci_if_error: false
+        token: ${{ secrets.CODECOV_TOKEN }}
+        fail_ci_if_error: no
 
   deploy:
     name: Deploy on Heroku
