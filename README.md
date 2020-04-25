@@ -2,7 +2,7 @@
 
 В ходе воркшопа вы пройдёте все этапы от написания кода до работающего сервера.
 
-[Регистрация]()
+[Регистрация](https://gdg-voronezh-event.timepad.ru/event/1300467/)
 
 [Чат](https://t.me/joinchat/FuWf2BX--ZwA2bONHaAa1A)
 
